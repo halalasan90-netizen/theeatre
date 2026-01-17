@@ -15,7 +15,7 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
         motivation: formData.get("motivation")
     };
 
-    fetch("PASTE_YOUR_SCRIPT_URL_HERE", {
+    fetch("https://script.google.com/macros/s/AKfycbwFMSPZvjgj5adcd2qZma8xTllkTpt6Mf10t8aRsBuQPU00iq5bIcazaQ8j-lblpzzlVA/exec", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -31,3 +31,22 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
         alert("Error! Please try again.");
     });
 });
+function toggleTeam(hasExperience) {
+    const experience = document.getElementById("experienceBox");
+    const motivation = document.getElementById("motivationBox");
+
+    if (hasExperience) {
+        experience.style.display = "block";
+        motivation.style.display = "none";
+    } else {
+        experience.style.display = "none";
+        motivation.style.display = "block";
+    }
+}
+
+// Optional: prevent real submit (for demo)
+document.getElementById("myForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Form submitted successfully!");
+});
+
