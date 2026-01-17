@@ -7,26 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        const data = {
-            fullname: formData.get("fullname"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            year: formData.get("year"),
-            experience: formData.get("team"),
-            worked_with: formData.get("worked_with"),
-            director_name: formData.get("director_name"),
-            project_title: formData.get("project_title"),
-            motivation: formData.get("motivation")
-        };
-
-        fetch("https://script.google.com/macros/s/AKfycbwFMSPZvjgj5adcd2qZma8xTllkTpt6Mf10t8aRsBuQPU00iq5bIcazaQ8j-lblpzzlVA/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbzzHAANi0T70N8F8qIopE2XVqXpbgkyKlNQ1yO86ptE/dev", {
             method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json"
-            }
+            body: formData
         })
-        .then(res => res.text()) // ✅ FIXED
         .then(() => {
             alert("Your registration has been sent successfully 🎭");
             form.reset();
@@ -41,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/* Toggle experience / motivation */
 function toggleTeam(hasExperience) {
     const experience = document.getElementById("experienceBox");
     const motivation = document.getElementById("motivationBox");
