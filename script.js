@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        fetch("https://script.google.com/macros/s/AKfycbzzHAANi0T70N8F8qIopE2XVqXpbgkyKlNQ1yO86ptE/dev", {
+        fetch("https://script.google.com/macros/s/AKfycbyAvTZBigxZL_FP1FlMbSaS7z0QEsW1QeZylAhpOFqLLYNKwFmtF5a4LN2kpm0ktS8X8g/exec", {
             method: "POST",
             body: formData
         })
@@ -75,3 +75,4 @@ function doPost(e) {
 
   return ContentService.createTextOutput("OK");
 }
+
