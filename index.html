@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Join Our Theatre Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-box">
+        <div class="header">
+            <img src="WhatsApp Image 2026-01-17 at 12.55.46 PM.jpeg" alt="">
+            <h1>Join Our Theatre Club</h1>
+            <p>On the stage, souls speak before tongues.</p>
+        </div>
+
+        <form id="myForm">
+
+            <div class="group">
+                <label><i class="fa-solid fa-user"></i> Full name</label>
+                <input type="text" name="fullname" required>
+            </div>
+
+            <div class="group">
+                <label><i class="fa-solid fa-envelope"></i> Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="group">
+                <label><i class="fa-solid fa-phone"></i> Phone number</label>
+                <input type="tel" name="phone" required>
+            </div>
+
+            <fieldset>
+                <legend>Level of study / Year</legend>
+                <div class="option"><input type="radio" name="year" value="1st"> 1st year</div>
+                <div class="option"><input type="radio" name="year" value="2nd"> 2nd year</div>
+                <div class="option"><input type="radio" name="year" value="3rd"> 3rd year</div>
+                <div class="option"><input type="radio" name="year" value="4th"> 4th year</div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Do you have experience in theatre? If yes?</legend>
+                <div class="option">
+                    <input type="radio" name="team" value="yes" onclick="toggleTeam(true)"> Yes
+                </div>
+                <div class="option">
+                    <input type="radio" name="team" value="no" onclick="toggleTeam(false)"> No
+                </div>
+            </fieldset>
+
+            <div id="experienceBox">
+
+                <div class="group">
+                    <label><i class="fa-solid fa-people-group"></i> Who did you work with?</label>
+                    <input type="text" name="worked_with">
+                </div>
+
+                <div class="group">
+                    <label><i class="fa-solid fa-user-tie"></i> Name of the director you worked with</label>
+                    <input type="text" name="director_name">
+                </div>
+
+                <div class="group">
+                    <label><i class="fa-solid fa-clapperboard"></i> Title of the project you worked on</label>
+                    <input type="text" name="project_title">
+                </div>
+
+            </div>
+            <div id="motivationBox" class="group">
+                <label><i class="fa-solid fa-masks-theater"></i>
+                    Why do you want to join the theatre?
+                </label>
+                <input type="text" name="motivation">
+            </div>
+
+
+
+            <button type="submit">CONFIRM</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
