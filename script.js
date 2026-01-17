@@ -44,9 +44,6 @@ function toggleTeam(hasExperience) {
     }
 }
 
-// Optional: prevent real submit (for demo)
-document.getElementById("myForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Form submitted successfully!");
-});
+
+
 
