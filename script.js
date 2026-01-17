@@ -44,35 +44,4 @@ function toggleTeam(hasExperience) {
 }
 
 
-function toggleTeam(hasExperience) {
-    const experience = document.getElementById("experienceBox");
-    const motivation = document.getElementById("motivationBox");
-
-    if (hasExperience) {
-        experience.style.display = "block";
-        motivation.style.display = "none";
-    } else {
-        experience.style.display = "none";
-        motivation.style.display = "block";
-    }
-}
-
-function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-
-  sheet.appendRow([
-    e.parameter.fullname,
-    e.parameter.email,
-    e.parameter.phone,
-    e.parameter.year,
-    e.parameter.team,
-    e.parameter.worked_with,
-    e.parameter.director_name,
-    e.parameter.project_title,
-    e.parameter.motivation,
-    new Date()
-  ]);
-
-  return ContentService.createTextOutput("OK");
-}
 
