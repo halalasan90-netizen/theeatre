@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        fetch("https://script.google.com/macros/s/AKfycbwvUQ0HUj8efXJrhXXspmuQXSII65ZiisA6edTV7GKV/dev", {
+        fetch("https://script.google.com/macros/library/d/1e7-lDtHi_3-vn8yPNh_Wn3xV-AbYu1939mhCtdBWRFShKi2saoDeL16E/1", {
             method: "POST",
             body: formData
         })
@@ -45,3 +45,4 @@ function toggleTeam(hasExperience) {
         motivation.style.display = "block";
     }
 }
+
